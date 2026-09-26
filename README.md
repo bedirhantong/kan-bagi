@@ -1,7 +1,15 @@
-# Kan Bağı
+<p align="center">
+  <img src="arts/logo.png" width="90"><br>
+  <h1 align="center">Kan Bağı</h1>
+</p>
 
-Kan bağışı ihtiyaçlarını duyuran, bağışçıları bilgilendiren ve teşvik eden açık kaynaklı bir mobil uygulama.
-Bağışın gerçekleştiği **doğrulanmaz**; amaç farkındalık yaratmak ve ilanları ilgili kişilere ulaştırmaktır.
+<p align="center">
+  Kan bağışı ihtiyaçlarını duyuran, bağışçıları bilgilendiren ve teşvik eden açık kaynaklı bir mobil uygulama.<br>
+  Bağışın gerçekleştiği <b>doğrulanmaz</b>; amaç farkındalık yaratmak ve ilanları ilgili kişilere ulaştırmaktır.
+</p>
+
+---
+
 
 ### Uygulama Ekranları
 
