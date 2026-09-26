@@ -371,7 +371,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Config/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = BloodApp;
+				INFOPLIST_KEY_CFBundleDisplayName = "Kan Bağı";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used to sort blood requests by distance and show hospitals near you.";
@@ -408,7 +408,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Config/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = BloodApp;
+				INFOPLIST_KEY_CFBundleDisplayName = "Kan Bağı";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used to sort blood requests by distance and show hospitals near you.";

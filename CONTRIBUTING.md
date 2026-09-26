@@ -1,6 +1,6 @@
 # Katkı Rehberi
 
-BloodApp bir topluluk projesidir: kan bağışı ihtiyaçlarını duyurmak, bağışçıları bilgilendirmek ve teşvik etmek için.
+Kan Bağı bir topluluk projesidir: kan bağışı ihtiyaçlarını duyurmak, bağışçıları bilgilendirmek ve teşvik etmek için.
 Hata düzeltmeleri, yeni özellikler, çeviriler ve dokümantasyon katkıları çok değerlidir. **İlk kez katkı veriyorsanız `good first issue` etiketli konulara bakın.**
 
 ## Hızlı başlangıç (5 dakika, Apple/Google hesabı gerekmez)

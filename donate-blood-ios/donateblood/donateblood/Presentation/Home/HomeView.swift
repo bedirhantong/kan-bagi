@@ -32,7 +32,7 @@ struct HomeView: View {
         }
         .background(Theme.Palette.feedBackground.ignoresSafeArea())
         .refreshable { await viewModel.reload() }
-        .navigationTitle(Text(verbatim: "BloodApp"))
+        .navigationTitle(Text(verbatim: "Kan Bağı"))
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {

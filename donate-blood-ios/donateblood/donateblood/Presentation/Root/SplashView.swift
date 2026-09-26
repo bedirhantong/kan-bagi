@@ -15,7 +15,7 @@ struct SplashView: View {
                 BloodDropShape().trim(from: 0, to: progress).stroke(brandRed, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
             }
             .frame(width: 130, height: 196)
-            .accessibilityLabel(Text(verbatim: "BloodApp"))
+            .accessibilityLabel(Text(verbatim: "Kan Bağı"))
         }
         .onAppear {
             withAnimation(.easeInOut(duration: 1.3)) { progress = 1 }

@@ -2,7 +2,7 @@ import SwiftUI
 import GoogleSignIn
 
 @main
-struct DonateBloodApp: App {
+struct DonateKan Bağı: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @StateObject private var session: SessionStore
     @StateObject private var languageStore = LanguageStore()

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BloodApp</string>
+    <string name="app_name">Kan Bağı</string>
     <string name="settings">Settings</string>
     <string name="profile">Profile</string>
     <string name="logout">Logout</string>
@@ -87,8 +87,8 @@
     <string name="accept_blood_donation_terms">Kan bağışı şartlarını okudum ve kabul ediyorum.</string>
     <string name="accept_privacy_policy">Gizlilik politikasını kabul ediyorum.</string>
     <string name="accept_data_share">Verilerimin kan bağışı amacıyla paylaşılmasını kabul ediyorum.</string>
-    <string name="blood_donation_terms_url" translatable="false">https://github.com/bedirhantong/blood-donation</string>
-    <string name="privacy_policy_url" translatable="false">https://github.com/bedirhantong/blood-donation</string>
+    <string name="blood_donation_terms_url" translatable="false">https://github.com/bedirhantong/kan-bagi</string>
+    <string name="privacy_policy_url" translatable="false">https://github.com/bedirhantong/kan-bagi</string>
 
     <!-- App Branding -->
     <string name="app_slogan">Hayat Kurtaran Bağlantı</string>

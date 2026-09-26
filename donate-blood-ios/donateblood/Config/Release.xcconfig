@@ -10,7 +10,7 @@ EMAIL_LOGIN_ENABLED = NO
 // Proje ve yasal bağlantılar (https). Kendi kopyanızda Secrets.xcconfig ile değiştirin.
 // xcconfig'de "//" yorum sayıldığı için eğik çizgiler $(LINK_SLASH) ile yazılır.
 LINK_SLASH = /
-SOURCE_CODE_URL = https:$(LINK_SLASH)$(LINK_SLASH)github.com/bedirhantong/blood-donation
+SOURCE_CODE_URL = https:$(LINK_SLASH)$(LINK_SLASH)github.com/bedirhantong/kan-bagi
 // Gizlilik politikası ve kullanım koşulları yayınlanana kadar geçici olarak proje deposu.
 TERMS_URL = $(SOURCE_CODE_URL)
 PRIVACY_URL = $(SOURCE_CODE_URL)

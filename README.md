@@ -1,4 +1,4 @@
-# BloodApp
+# Kan Bağı
 
 Kan bağışı ihtiyaçlarını duyuran, bağışçıları bilgilendiren ve teşvik eden açık kaynaklı bir mobil uygulama.
 Bağışın gerçekleştiği **doğrulanmaz**; amaç farkındalık yaratmak ve ilanları ilgili kişilere ulaştırmaktır.

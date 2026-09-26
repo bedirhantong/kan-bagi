@@ -131,7 +131,7 @@ struct AboutView: View {
             Section {
                 VStack(spacing: 8) {
                     BloodDropShape().fill(Theme.brand).frame(width: 44, height: 66).accessibilityHidden(true)
-                    Text(verbatim: "BloodApp").font(.system(.title, design: .serif).bold())
+                    Text(verbatim: "Kan Bağı").font(.system(.title, design: .serif).bold())
                     Text("about.tagline").font(.subheadline).foregroundStyle(.secondary).multilineTextAlignment(.center)
                 }
                 .frame(maxWidth: .infinity)

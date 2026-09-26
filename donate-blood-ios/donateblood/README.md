@@ -1,4 +1,4 @@
-# BloodApp (iOS)
+# Kan Bağı (iOS)
 
 Kan bağışı ihtiyaçlarını duyuran, bağışçıları bilgilendiren ve teşvik eden native iOS uygulaması.
 Android uygulamasının (`donate-blood-android`) SwiftUI karşılığıdır; backend olarak **Supabase** kullanır.
@@ -38,7 +38,7 @@ Misafir kısıtı: `SessionStore.requireAccount` misafirlerde giriş sayfasını
 
 [Apache License 2.0](../../LICENSE). Projeyi kullanabilir, değiştirebilir, çatallayabilir ve ticari olarak yayınlayabilirsiniz.
 Tek koşul (Apache-2.0 §4): kopyanızda [LICENSE](../../LICENSE) ve [NOTICE](../../NOTICE) dosyalarını koruyun, yani orijinal projeye atıf yapın
-(ör. README'nizde veya uygulamanızın "Hakkında" ekranında: *"BloodApp tabanlıdır — Bedirhan Tong"*).
+(ör. README'nizde veya uygulamanızın "Hakkında" ekranında: *"Kan Bağı tabanlıdır — Bedirhan Tong"*).
 Örnek veri ve dış görseller lisansa dahil değildir, ayrıntı için [NOTICE](../../NOTICE).
 
 ## Katkı vermek

@@ -4,7 +4,7 @@ import Foundation
 /// kendi kopyanızı yayınlıyorsanız bunları kendi sayfalarınızla değiştirin.
 enum AppLinks {
     /// Geçici varsayılan: gizlilik politikası ve kullanım koşulları yayınlanana kadar proje deposu.
-    static let projectHome = URL(string: "https://github.com/bedirhantong/blood-donation")!
+    static let projectHome = URL(string: "https://github.com/bedirhantong/kan-bagi")!
 
     /// Projenin açık kaynak deposu (Hakkında ekranında gösterilir). `SOURCE_CODE_URL` xcconfig değerinden okunur;
     /// boşsa bağlantı gösterilmez. Kendi kopyanızı yayınlıyorsanız kendi adresinizi yazın ve ana projeyi ayrıca anın.
