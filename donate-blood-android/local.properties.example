@@ -1,0 +1,11 @@
+# Bu dosyayı local.properties olarak kopyalayıp doldurun (local.properties git'e girmez).
+# Google Maps SDK anahtarı (Google Cloud'da Android uygulaması + SHA-1 ile kısıtlayın)
+MAPS_API_KEY=
+# Contentful (isteğe bağlı; boşsa hikâyeler gösterilmez)
+CONTENTFUL_SPACE_ID=
+CONTENTFUL_ACCESS_TOKEN=
+# Release imzası (isteğe bağlı; boşsa release imzasız derlenir)
+RELEASE_STORE_FILE=
+RELEASE_STORE_PASSWORD=
+RELEASE_KEY_ALIAS=
+RELEASE_KEY_PASSWORD=

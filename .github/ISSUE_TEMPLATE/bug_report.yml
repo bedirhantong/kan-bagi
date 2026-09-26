@@ -1,0 +1,23 @@
+name: Hata bildirimi
+description: Bir şey beklediğiniz gibi çalışmıyor
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: Ne oldu?
+      description: Beklediğiniz ve gerçekleşen davranış
+    validations: { required: true }
+  - type: textarea
+    id: steps
+    attributes:
+      label: Yeniden üretme adımları
+    validations: { required: true }
+  - type: input
+    id: env
+    attributes:
+      label: Ortam
+      placeholder: iOS 17.5, iPhone 15 simülatörü, Xcode 16.2
+  - type: markdown
+    attributes:
+      value: "Lütfen gerçek kişisel/sağlık verisi veya gizli anahtar paylaşmayın."

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    
+    <!-- Shadow -->
+    <path
+        android:fillColor="#33000000"
+        android:pathData="M12,2.5C8.13,2.5 5,5.63 5,9.5c0,5.25 7,13 7,13s7,-7.75 7,-13c0,-3.87 -3.13,-7 -7,-7z"
+        android:translateY="0.5"/>
+    
+    <!-- Main marker shape -->
+    <path
+        android:fillColor="#E11E26"
+        android:pathData="M12,2C8.13,2 5,5.13 5,9c0,5.25 7,13 7,13s7,-7.75 7,-13c0,-3.87 -3.13,-7 -7,-7z"/>
+    
+    <!-- Kızılay cross -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,4C9.79,4 8,5.79 8,8s1.79,4 4,4s4,-1.79 4,-4S14.21,4 12,4zM14,8.5h-1.5V10h-1V8.5H10v-1h1.5V6h1v1.5H14V8.5z"/>
+</vector> 

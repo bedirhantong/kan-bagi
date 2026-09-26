@@ -1,0 +1,76 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+defaults:
+  run:
+    working-directory: donate-blood-ios/donateblood
+
+concurrency:
+  group: ios-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ios:
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+
+      - name: Localization check
+        run: python3 Tools/check_localization.py
+
+      - name: Create Secrets.xcconfig from the example
+        # Gerçek anahtarlar repoda tutulmaz; CI yer tutucu değerlerle derler ve test eder.
+        run: cp Config/Secrets.example.xcconfig Config/Secrets.xcconfig
+
+      - name: Cache Swift packages
+        uses: actions/cache@v4
+        with:
+          path: ~/Library/Developer/Xcode/DerivedData/**/SourcePackages
+          key: spm-${{ hashFiles('donate-blood-ios/**/Package.resolved') }}
+          restore-keys: spm-
+
+      - name: Pick an iPhone simulator
+        run: |
+          NAME=$(xcrun simctl list devices available | grep -E "iPhone [0-9]+( Pro)?( \(|$)" | head -1 | sed -E 's/^ *(iPhone[^(]*)\(.*/\1/' | xargs)
+          echo "SIMULATOR=$NAME" >> "$GITHUB_ENV"
+
+      - name: Build and test
+        run: |
+          xcodebuild test \
+            -project donateblood.xcodeproj \
+            -scheme donateblood \
+            -destination "platform=iOS Simulator,name=$SIMULATOR" \
+            CODE_SIGNING_ALLOWED=NO \
+            | tee build.log | grep -E "error:|Test (case|run)|TEST (SUCCEEDED|FAILED)" || true
+          grep -q "TEST SUCCEEDED" build.log
+
+  edge-function:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: Type-check, lint and test the send-push Edge Function
+        working-directory: supabase/functions/send-push
+        run: |
+          deno check index.ts onesignal_test.ts
+          deno lint
+          deno test -A onesignal_test.ts
+      - name: Test the blood point importer
+        working-directory: .
+        run: python3 -m unittest discover -s supabase/tools -v

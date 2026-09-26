@@ -1,0 +1,62 @@
+import SwiftUI
+
+/// Android splash ekranındaki damla logosunun (SVG path) SwiftUI karşılığı.
+/// Yalnızca M/C/Z komutlarını (mutlak) destekler.
+struct BloodDropShape: Shape {
+    private static let pathData = "M167.3,161.65C168.02,173.12 165.68,185.09 158.88,194.35C146.95,210.61 123.62,215.04 104.08,210.01C82.33,204.42 59.53,189.35 46.42,171.21C40.86,163.52 36.51,154.32 37.36,144.86C38.32,134.23 46.48,124.62 56.81,121.95C67.15,119.28 78.94,123.74 84.93,132.58C89.63,121.6 104.76,117.42 115.36,122.92C125.96,128.42 131.37,141.47 129.72,153.3C128.08,165.13 120.33,175.52 110.58,182.42C109.88,182.92 109.14,183.41 108.3,183.62C105.07,184.42 102.35,180.43 102.93,177.15C103.52,173.88 106.07,171.38 108.35,168.95C112.95,164.07 117.02,158.37 118.36,151.79C119.7,145.22 117.78,137.65 112.33,133.73C98.97,124.12 95.84,143.26 85.59,144.59C77.98,145.58 74.23,135.25 67.36,131.83C58.19,127.26 47.35,137.93 47.86,148.16C48.38,158.39 55.93,166.76 63.45,173.71C77.24,186.46 93.37,198.09 112.01,200.4C130.64,202.7 151.87,192.74 156.71,174.59C159.83,162.87 155.82,150.53 151.43,139.21C134.65,95.95 111.76,55.06 83.64,18.14C58.86,50.82 38.37,86.75 22.86,124.72C16.27,140.86 10.49,157.99 11.9,175.37C13.97,200.81 32.47,223.71 56.34,232.75C80.2,241.79 108.27,237.4 129.33,222.99C131,221.85 133.06,220.69 135.04,220.16C137.17,219.59 139.21,219.75 140.57,221.44C143.17,224.67 139.69,229.23 136.32,231.66C110.82,250.07 75.16,254.17 46.63,240.45C21.76,228.49 3.74,203.18 0.71,175.75C-2.71,144.81 13.45,112.35 27.68,85.87C43.29,56.81 61.07,28.92 80.82,2.51C81.61,1.46 82.59,0.3 83.91,0.26C85.41,0.21 86.51,1.59 87.34,2.83C114.33,42.86 141.55,83.33 158.87,128.39C163,139.11 166.57,150.19 167.3,161.65Z"
+    private static let bounds = CGRect(x: 0, y: 0, width: 168, height: 254)
+
+    private static let commands: [(kind: Character, points: [CGPoint])] = {
+        var result: [(Character, [CGPoint])] = []
+        var scanner = pathData[...]
+        var kind: Character = "M"
+        var numbers: [Double] = []
+        func flush() {
+            guard !numbers.isEmpty || kind == "Z" else { return }
+            let stride = kind == "C" ? 6 : 2
+            var index = 0
+            while index + stride <= numbers.count {
+                var points: [CGPoint] = []
+                for i in Swift.stride(from: index, to: index + stride, by: 2) { points.append(CGPoint(x: numbers[i], y: numbers[i + 1])) }
+                result.append((kind, points))
+                index += stride
+            }
+            numbers.removeAll()
+        }
+        var token = ""
+        func pushToken() { if let value = Double(token) { numbers.append(value) }; token = "" }
+        while let ch = scanner.popFirst() {
+            if ch.isLetter {
+                pushToken(); flush()
+                kind = ch
+                if ch == "Z" { result.append(("Z", [])) }
+            } else if ch == "," || ch == " " {
+                pushToken()
+            } else if ch == "-" && !token.isEmpty && !token.hasSuffix("e") {
+                pushToken(); token = "-"
+            } else {
+                token.append(ch)
+            }
+        }
+        pushToken(); flush()
+        return result
+    }()
+
+    func path(in rect: CGRect) -> Path {
+        let scale = min(rect.width / Self.bounds.width, rect.height / Self.bounds.height)
+        let offsetX = rect.minX + (rect.width - Self.bounds.width * scale) / 2
+        let offsetY = rect.minY + (rect.height - Self.bounds.height * scale) / 2
+        func map(_ p: CGPoint) -> CGPoint { CGPoint(x: offsetX + p.x * scale, y: offsetY + p.y * scale) }
+
+        var path = Path()
+        for command in Self.commands {
+            switch command.kind {
+            case "M": path.move(to: map(command.points[0]))
+            case "C": path.addCurve(to: map(command.points[2]), control1: map(command.points[0]), control2: map(command.points[1]))
+            case "Z": path.closeSubpath()
+            default: break
+            }
+        }
+        return path
+    }
+}

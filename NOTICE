@@ -1,0 +1,31 @@
+BloodApp
+Copyright 2026 Bedirhan Tong
+
+This product includes software developed by Bedirhan Tong.
+If you redistribute this work or a derivative of it (source or binary), you must keep this NOTICE
+file, or an equivalent attribution notice, in a place where users can find it (for example an
+"About" screen, the README or your distribution's documentation), as required by Section 4(d)
+of the Apache License, Version 2.0.
+
+Third-party components
+----------------------
+This project depends on open source libraries that are licensed separately under their own terms:
+  - supabase-swift (MIT)                    https://github.com/supabase/supabase-swift
+  - GoogleSignIn-iOS (Apache-2.0)           https://github.com/google/GoogleSignIn-iOS
+  - OneSignal-XCFramework (MIT)             https://github.com/OneSignal/OneSignal-XCFramework
+Their licenses are available in their repositories and in Xcode's Swift Package resolution.
+
+Content that is NOT covered by this license
+-------------------------------------------
+The Apache-2.0 license applies to the source code and documentation of this repository only.
+It does not grant any rights to:
+  - Third-party images, logos and articles that the sample data (supabase/02_seed.sql, story
+    content) or the app may load from external websites (for example news, hospital or
+    organization sites). Their copyright belongs to their owners. Replace them with content you
+    have the right to use before publishing your own build.
+  - The names and marks of the Turkish Red Crescent (Kizilay), the World Health Organization,
+    Apple, Google, Supabase, OneSignal or any hospital shown in the sample data.
+  - The sample hospital, patient and user data, which is fictional and only meant for testing.
+  - The blood donation point list (supabase/11_blood_donation_points_data.sql) is derived from public
+    Turkish Red Crescent (Kizilay) collection team listings (May 2025 snapshot). It is provided for
+    convenience only; the data and marks belong to their owners. Verify locations with Kizilay before relying on them.

@@ -1,0 +1,17 @@
+// Release yapılandırması. E-posta/şifre test girişi varsayılan olarak KAPALIDIR.
+// Yerel (kişiye özel) değerler Secrets.xcconfig içinde tutulur ve git'e girmez.
+// Varsayılanlar Secrets'tan ÖNCE tanımlanır; Secrets.xcconfig ile geçersiz kılınabilir.
+APP_BUNDLE_ID = com.example.bloodapp
+APP_DEVELOPMENT_TEAM =
+// Sign in with Apple + Push yetkileri ücretli geliştirici hesabı ister. Ücretsiz hesapla cihaza kurmak için
+// Minimal.entitlements kullanılır; ücretli hesabınız varsa Secrets'ta APP_ENTITLEMENTS = donateblood.entitlements yapın.
+APP_ENTITLEMENTS = Minimal.entitlements
+EMAIL_LOGIN_ENABLED = NO
+// Proje ve yasal bağlantılar (https). Kendi kopyanızda Secrets.xcconfig ile değiştirin.
+// xcconfig'de "//" yorum sayıldığı için eğik çizgiler $(LINK_SLASH) ile yazılır.
+LINK_SLASH = /
+SOURCE_CODE_URL = https:$(LINK_SLASH)$(LINK_SLASH)github.com/bedirhantong/blood-donation
+// Gizlilik politikası ve kullanım koşulları yayınlanana kadar geçici olarak proje deposu.
+TERMS_URL = $(SOURCE_CODE_URL)
+PRIVACY_URL = $(SOURCE_CODE_URL)
+#include? "Secrets.xcconfig"

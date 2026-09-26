@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name">BloodApp</string>
+    <string name="settings">Settings</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+
+    // Onboarding
+    <string name="onboarding_title_1">Hayat Kurtarın</string>
+    <string name="onboarding_desc_1">Kan bağışı yaparak birçok insanın hayatını kurtarmaya yardımcı olabilirsiniz.</string>
+    <string name="onboarding_title_2">Kolay Bağış</string>
+    <string name="onboarding_desc_2">En yakın kan bağış merkezini bulun ve hemen bağış yapmaya başlayın.</string>
+    <string name="onboarding_title_3">Takipte Kalın</string>
+    <string name="onboarding_desc_3">Kan bağış geçmişinizi takip edin ve ne zaman bağış yapabileceğinizi öğrenin.</string>
+    <string name="start">Başla</string>
+    <string name="next">İleri</string>
+    <string name="previous">Önceki</string>
+    <string name="step_over">Atla</string>
+
+
+    // Authentication
+    <string name="login">Giriş Yap</string>
+    <string name="register">Kayıt Ol</string>
+    <string name="enter_phone_number_error">Telefon numarası girmeniz gerekli.</string>
+    <string name="enter_a_valid_number">Lütfen geçerli bir telefon numarası giriniz.</string>
+    <string name="or">Ya da</string>
+    <string name="continue_with_regular_user">Kullanıcı olarak giriş yap</string>
+    <string name="continue_with_hospital_user">Hastane personeli olarak giriş yap</string>
+    <string name="continue_with_google">Google ile devam et</string>
+    <string name="dont_have_account">Henüz hesabın yok mu?.</string>
+    <string name="already_have_account">Zaten hesabın var mı? Giriş yap.</string>
+    <string name="phone_number">Telefon Numarası</string>
+    <string name="verification_code">Doğrulama Kodu</string>
+    <string name="send_code">Kodu Gönder</string>
+    <string name="verify">Doğrula</string>
+    <string name="resend_code">Kodu Tekrar Gönder</string>
+    <string name="enter_verification_code">Doğrulama kodunu giriniz.</string>
+    <string name="verification_code_error">Doğrulama kodu girmeniz gerekli.</string>
+    <string name="verification_code_incorrect">Doğrulama kodu yanlış.</string>
+    <string name="verification_code_sent">Doğrulama kodu gönderildi.</string>
+    <string name="verification_code_resend">Doğrulama kodu tekrar gönderildi.</string>
+    <string name="login_as_user">Kullanıcı olarak giriş yap</string>
+    <string name="choose_login_type">Giriş Yöntemi Seçiniz</string>
+    <string name="login_as_hospital">Hastane olarak giriş yap</string>
+    <string name="login_as_guest">Misafir olarak giriş yap</string>
+    <string name="personal">Kişisel</string>
+    <string name="birthday">Doğum</string>
+    <string name="contact">İletişim</string>
+    <string name="blood_type">Kan Grubu</string>
+    <string name="personal_info">Kişisel Bilgiler</string>
+    <string name="full_name">İsim Soyisim</string>
+    <string name="pick_birthday">Doğum tarihi seç</string>
+    <string name="picked_birthday">Doğum tarihiniz : %s</string>
+    <string name="pick_blood_type">Kan grubu seç</string>
+    <string name="accpet_terms">Kullanım koşullarını kabul ediyorum.</string>
+    <string name="summary">Bilgilerinizi Onaylayın</string>
+    <string name="gender">Cinsiyet</string>
+
+    // Share Post Screen
+    <string name="share_request">Kan İhtiyacını Paylaş</string>
+    <string name="patient_name">Hasta Adı</string>
+    <string name="hospital">Hastane</string>
+    <string name="select">Seç</string>
+    <string name="change">Değiştir</string>
+    <string name="your_name">Adınız</string>
+    <string name="contact_number">İletişim Numarası</string>
+    <string name="additional_info">Ek Bilgiler</string>
+    <string name="emergency_status">Acil Durum</string>
+    <string name="emergency_description">Acil kan ihtiyacı varsa işaretleyin</string>
+    <string name="share_post_title">Kan İhtiyacı Paylaş</string>
+    <string name="share_post_subtitle">Kan ihtiyacını paylaşarak hayat kurtarabilirsiniz</string>
+    <string name="error_patient_name_required">Hasta adı gerekli</string>
+    <string name="error_hospital_required">Hastane seçimi gerekli</string>
+    <string name="error_blood_type_required">Kan grubu seçimi gerekli</string>
+    <string name="error_requester_name_required">İsminiz gerekli</string>
+    <string name="error_contact_number_required">İletişim numarası gerekli</string>
+    <string name="error_terms_required">Şartları kabul etmeniz gerekli</string>
+    <string name="success_share_request">Kan ihtiyacı başarıyla paylaşıldı</string>
+    <string name="select_hospital">Hastane Seç</string>
+    <string name="search_hospitals">Hastane Ara</string>
+    <string name="select_blood_type">Kan Grubu Seç</string>
+    <string name="search_blood_types">Kan Grubu Ara</string>
+
+    // Terms and Conditions
+    <string name="terms_and_conditions">Şartlar ve Koşullar</string>
+    <string name="blood_donation_terms">Kan Bağışı Şartlarını kabul ediyorum.</string>
+    <string name="privacy_policy">Gizlilik Politikası</string>
+    <string name="accept_blood_donation_terms">Kan bağışı şartlarını okudum ve kabul ediyorum.</string>
+    <string name="accept_privacy_policy">Gizlilik politikasını kabul ediyorum.</string>
+    <string name="accept_data_share">Verilerimin kan bağışı amacıyla paylaşılmasını kabul ediyorum.</string>
+    <string name="blood_donation_terms_url" translatable="false">https://github.com/bedirhantong/blood-donation</string>
+    <string name="privacy_policy_url" translatable="false">https://github.com/bedirhantong/blood-donation</string>
+
+    <!-- App Branding -->
+    <string name="app_slogan">Hayat Kurtaran Bağlantı</string>
+
+    <!-- Login Type Screen -->
+    <string name="initializing">Başlatılıyor...</string>
+    <string name="background_image_description">Giriş ekranı arkaplanı</string>
+    <string name="login_successful">Giriş başarılı!</string>
+
+    <!-- Microsoft Authentication -->
+    <string name="msal_initialization_error">Microsoft kimlik doğrulama hizmeti başlatılamadı. Lütfen daha sonra tekrar deneyin.</string>
+
+    <!-- Auth Error Messages -->
+    <string name="password_reset_in_progress">Şifre sıfırlama işlemi devam ediyor...</string>
+    <string name="token_processing_error">Kimlik doğrulaması başarılı! Ancak token işlenirken bir sorun oluştu. Tekrar deneyiniz.</string>
+    <string name="credentials_retrieval_error">Kimlik bilgileri alınamadı. Lütfen tekrar deneyin.</string>
+    <string name="login_retry_required">Giriş yapmak için tekrar denemeniz gerekiyor.</string>
+    <string name="login_canceled_by_user">Giriş işlemi kullanıcı tarafından iptal edildi.</string>
+    <string name="token_missing_error">Kimlik doğrulaması başarılı ancak kimlik bilgileri alınamadı. Lütfen tekrar deneyin.</string>
+    <string name="auth_response_parse_error">Kimlik doğrulaması yanıtını işlerken bir hata oluştu. Lütfen tekrar deneyin.</string>
+
+    <!-- Button Icons -->
+    <!-- Not: Bu string'ler, drawable kaynaklarınızın referansları için burada gösterilmektedir.
+         Gerçek drawable kaynakları proje içinde oluşturulmalı veya varsa kullanılmalıdır. -->
+    <string name="ic_microsoft_desc">Microsoft logo</string>
+    <string name="ic_hospital_desc">Hastane logo</string>
+</resources>

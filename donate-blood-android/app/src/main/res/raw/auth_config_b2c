@@ -1,0 +1,28 @@
+{
+    "client_id" : "3b6279ee-04d2-4dea-b8fd-ba38dcc4e76f",
+    "authorization_user_agent" : "WEBVIEW",
+    "redirect_uri" : "msauth://com.ribuufing.bloodapp/gYfucgrOlZ3FLWgYctqk1bCxZbo%3D",
+    "broker_redirect_uri_registered": true,
+    "account_mode": "SINGLE",
+    "minimum_required_broker_protocol_version": "3.0",
+    "authorities" : [
+      {
+        "type": "B2C",
+        "authority_url": "https://bloodapp.b2clogin.com/bloodapp.onmicrosoft.com/B2C_1_signup_signin",
+        "default": true
+      }
+    ],
+    // Browser safelist defines which browsers can be used for authentication
+    // This list helps to prevent phishing attempts by only allowing trusted browsers
+    "browser_safelist": [
+        {
+            // Chrome is specified as a trusted browser for authentication
+            "browser_package_name": "com.android.chrome",
+            // Signature hash verifies the authenticity of the Chrome browser
+            "browser_signature_hashes": ["E26AS3K2J5H8L9M1N4P7Q0R3T6U9X2Y5"]
+        }
+    ],
+    // Allows HTTP connections without SSL/TLS encryption - only use in development!
+    // WARNING: This should be set to false for production environments
+    "http_allow_insecure": true
+}

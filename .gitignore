@@ -1,0 +1,43 @@
+# --- macOS / editörler
+.DS_Store
+**/.DS_Store
+.idea/
+**/.idea/
+.vscode/
+
+# --- Gizli / imzalama dosyaları (ASLA commit etmeyin)
+*.keystore
+*.jks
+*.p12
+*.p8
+*.pem
+*.mobileprovision
+google-services.json
+GoogleService-Info.plist
+local.properties
+**/Config/Secrets.xcconfig
+.env
+.env.*
+!.env.example
+
+# --- iOS / Xcode
+xcuserdata/
+DerivedData/
+.build/
+*.xcuserstate
+
+# --- Android / Gradle
+.gradle/
+.kotlin/
+**/build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.iml
+
+# --- Supabase CLI
+supabase/.temp/
+supabase/.branches/
+
+# --- Bu bilgisayardaki AI/çalışma notları (yayınlanmaz)
+agent_reference.md

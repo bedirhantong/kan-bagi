@@ -1,0 +1,13 @@
+name: Çeviri / yeni dil
+description: Yeni bir dil eklemek veya çeviriyi düzeltmek
+labels: [translation, good first issue]
+body:
+  - type: input
+    id: lang
+    attributes:
+      label: Dil
+      placeholder: Deutsch (de)
+    validations: { required: true }
+  - type: markdown
+    attributes:
+      value: "Adımlar için CONTRIBUTING.md > Yerelleştirme bölümüne bakın."
