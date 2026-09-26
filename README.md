@@ -8,6 +8,21 @@
   Bağışın gerçekleştiği <b>doğrulanmaz</b>; amaç farkındalık yaratmak ve ilanları ilgili kişilere ulaştırmaktır.
 </p>
 
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="100%">
+        <b>Backend ve Devops Altyapısı</b><br>
+        <small>Bu projenin backend servisleri ayrı bir repository barındırılmaktadır.</small><br><br>
+        <b>Geliştiriciler:</b> 
+        <a href="https://github.com/onurcetindev">@onurcetindev</a> &bull; 
+        <a href="https://github.com/alatasms">@alatasms</a> &bull; 
+        <a href="https://github.com/SerhanBaymaz">@SerhanBaymaz</a>
+      </td>
+    </tr>
+  </table>
+</div>
+
 ---
 
 
