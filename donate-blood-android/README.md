@@ -7,6 +7,10 @@
   </p>
 </div>
 
+> **Backend:** [alatasms/kan-bagi-backend](https://github.com/alatasms/kan-bagi-backend).
+> The backend has changed since this client was written. The endpoint list below describes what this client
+> currently calls; see [Connecting to the updated backend](#connecting-to-the-updated-backend) for the required changes.
+
 ## Setup (secrets)
 API keys and signing credentials are **not** in the repository. Copy `local.properties.example` to
 `local.properties` (git-ignored) and fill in `MAPS_API_KEY`, optionally `CONTENTFUL_*` and the `RELEASE_*`
@@ -116,6 +120,23 @@ Below are the main modules of the application and a summary of their related API
 - **Examples:**
   - `POST Profile/set-notification-preferences` — Set notification preferences
   - `GET Profile/get-notification-preferences` — Get notification preferences
+
+## Connecting to the updated backend
+This client has not been adapted to the current backend yet. The work is open for contributions and is
+tracked in the [backend roadmap](https://github.com/alatasms/kan-bagi-backend). What changed:
+
+- **Sign-in:** Keycloak replaces Azure AD B2C (client `bloodapp-mobile`, Authorization Code with PKCE).
+  Roles are read from the token's `roles` claim.
+- **National ID (TC) field:** call `GET /profile/config` first and show the field only when
+  `identityVerificationEnabled` is `true`.
+- **Removed fields:** `userType`, `ownerName` / `ownerSurname`, `ownerEmail`, `tcIdentityNumber`.
+- **New fields:** `expiresAt`, `isIdentityVerified`.
+- **Errors:** the backend no longer answers every error with `200`; it returns the real status code
+  (`400`, `401`, `403`, `404`, `409`, `422`), which the client must handle.
+- **Endpoint:** `GET aggregate/user/{userId}/posts` is now `GET aggregate/me/posts`.
+- **Chat:** every request must carry the token. The WebSocket accepts it in the header or as `?access_token=`.
+- **Matching:** only staff with the `hospital_staff` role can validate a donation (no longer the post owner).
+  The QR code contains the matching id.
 
 ## Project Structure
 ```
