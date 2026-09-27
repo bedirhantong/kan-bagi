@@ -41,3 +41,7 @@ supabase/.branches/
 
 # --- Bu bilgisayardaki AI/çalışma notları (yayınlanmaz)
 agent_reference.md
+
+# --- Yerel yardımcı araçlar (HyperFrames skill kurulumu; depoya girmez)
+.claude/
+skills-lock.json
