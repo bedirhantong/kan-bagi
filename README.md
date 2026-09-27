@@ -29,13 +29,15 @@
 
 ---
 
-> Bu depo Android ve iOS uygulamalarını ve ortak backend'i (Supabase) içerir.
+> Bu depo iOS ve Android uygulamalarını içerir. iOS uygulamasının backend'i Supabase'dir (`supabase/`).
+> Bitirme projesindeki mikroservis backend'i ayrı bir repodadır: [alatasms/kan-bagi-backend](https://github.com/alatasms/kan-bagi-backend).
 
 | Klasör | İçerik | Durum |
 |---|---|---|
 | [`donate-blood-ios/`](donate-blood-ios/donateblood/README.md) | **Native SwiftUI iOS uygulaması** (iOS 16+), Clean Architecture, Supabase | Güncel, test edilmiş |
 | [`supabase/`](supabase/README.md) | Veritabanı şeması + RLS, yamalar, örnek veri, test kullanıcıları, `send-push` Edge Function | Güncel |
-| [`donate-blood-android/`](donate-blood-android/README.md) | Jetpack Compose Android uygulaması | **Eski (legacy):** mikroservis backend'ine bağlıdır, Supabase'e henüz taşınmadı. Referans arayüz olarak durur |
+| [`donate-blood-android/`](donate-blood-android/README.md) | Jetpack Compose Android uygulaması | **Eski (legacy):** [mikroservis backend'ine](https://github.com/alatasms/kan-bagi-backend) bağlanır, backend'in güncel API'sine henüz uyarlanmadı ([gereken değişiklikler](donate-blood-android/README.md#connecting-to-the-updated-backend)). Referans arayüz olarak durur |
+| [`kan-bagi-backend`](https://github.com/alatasms/kan-bagi-backend) (ayrı repo) | Mikroservis backend'i: .NET, Python ve Spring Boot servisleri, Keycloak, RabbitMQ; Docker Compose ile yerelde çalışır | Android istemcisi kullanır, iOS kullanmaz |
 | [`docs/`](docs/) | Push bildirimleri (OneSignal) kurulumu | |
 
 ## Hızlı başlangıç (iOS, Apple/Google hesabı gerekmez)
@@ -53,6 +55,12 @@ Ayrıntılar: [CONTRIBUTING.md](CONTRIBUTING.md).
 - Bağışçı uygunluk formu (bilgilendirme amaçlı)
 - Misafir modu (salt okunur), Apple/Google girişi, kan grubuna ve seçilen il/ilçe/hastanelere göre push bildirimi
 - Türkçe ve İngilizce
+
+## Yol haritası
+Katkıya açık işler [kan-bagi-backend reposundaki yol haritasında](https://github.com/alatasms/kan-bagi-backend) toplanıyor. Öne çıkanlar:
+- QR kodla bağış doğrulama: backend'de hazır, mobil uygulamaya henüz bağlanmadı
+- Kurumların kan stoğu durumuna göre kullanıcılara bildirim
+- Android istemcisinin backend'in güncel API'sine uyarlanması
 
 ## Lisans ve atıf
 [Apache License 2.0](LICENSE). Kullanabilir, değiştirebilir, çatallayabilir ve yayınlayabilirsiniz;
